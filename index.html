@@ -8,70 +8,63 @@
   </head>
   <body>
     <header>
-      <nav class="nav-bar">
-        <div id="logo">
-          <img src="./images/logo.png" alt="" />
-        </div>
-        <div id="search">
-          <img src="./images/assets/search.png" alt="" />
-        </div>
-      </nav>
+      <div class="nav-bar">
+        <div class="logo-search">
+          <div class="logo">
+            <img src="./images/logo.png" alt="" />
+          </div>
+          <div class="input-bar">
+            <input
+              type="text"
+              id="search"
+              placeholder="Search something here..."
+            />
+            <img
+              src="./images/search_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+            />
+          </div>
 
-      <section class="hero-section">
-        <div class="hero-container">
-          <h2>Account Balance</h2>
-          <div class="hero-content">
-            <div class="hero-content-text">
-              <p>Account Details</p>
-            </div>
-            <div class="hero-content-image">
-              <img src="./images/assets/kisito.jpeg" alt="" />
-            </div>
-            <div class="hero-content-details">
-              <p>$ 60,000</p>
-            </div>
+          <div class="day-night">
+            <button id="day">
+              <img
+                src="./images/flash_on_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                alt=""
+              />
+            </button>
           </div>
         </div>
-      </section>
-    </header>
-
-    <main>
-      <section class="section-one">
-        <div class="sec-one-text">
-          <h3>Upcoming Expiration</h3>
-          <div class="content">
-            <div class="content-text">
-              <p>Light</p>
-              <p>$ 1200.00</p>
-            </div>
-            <div class="content-text">
-              <p>Tenis</p>
-              <p>$ 800.00</p>
-            </div>
-            <div class="content-text">
-              <p>Rent</p>
-              <p>$ 1690.00</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div class="section-two">
-        <h3>Account</h3>
-        <div class="sec-two-contents">
-          <div class="sec-two-content-one">
-            <h4><img src="" alt="" /> Cash</h4>
-            <h5>$ 1,560.00</h5>
-            <p>Transactions</p>
-          </div>
-          <div class="sec-two-content-one">
-            <h4><img src="" alt="" /> BISEC</h4>
-            <h5>$ 1,560.00</h5>
-            <p>Transactions</p>
+        <div class="person">
+          <img src="./images/assets/kisito.jpeg" alt="" />
+          <div class="per-name">
+            <h4>Delzy</h4>
           </div>
         </div>
       </div>
+    </header>
+
+    <h1>Expense Tracker</h1>
+
+    <main>
+      <div id="balance-container">
+        <h2>Your Balance: $ <span id="balance">0.00</span></h2>
+        <div class="totals">
+          <div class="income">Income: $<span id="income">0.00</span></div>
+          <div class="expense">Expenses: $<span id="expense"> 0.00</span></div>
+        </div>
+      </div>
+
+      <form id="transaction-form">
+        <input type="text" id="description" placeholder="Enter description" required>
+        <input type="number" id="amount" placeholder="Enter amount" required />
+        <input type="date" id="date" />
+        <button type="submit">Add Transaction</button>
+      </form>
+
+      <ul id="transaction-list"></ul>
     </main>
 
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/form.js"></script>
   </body>
 </html>
