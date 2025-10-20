@@ -183,7 +183,7 @@ body {
     border-radius: 5px;
   }
 
-  #transaction-list li.income {
+  #transaction-list li.income{
     border-color: #2ecc71;
     color: #2ecc71;
   }
@@ -202,5 +202,57 @@ body {
     color: #7a0e02;
     font-weight: bold;
     cursor: pointer;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header {
+    display: none;
+  }
+
+  main {
+    width: 35%;
+  }
+
+  #balance-container {
+    gap: 32px;
+  }
+
+  .totals {
+    flex-direction: row;
+  }
+
+  .income,
+  .expense {
+    padding: 10px;
+    width: 150px;
+  }
+
+  #transaction-form {
+    gap: 12px;
+  }
+
+  #transaction-form input {
+    width: 420px;
+  }
+
+  #transaction-form button {
+    width: 420px;
+  }
+
+  #transaction-list {
+    width: 90%;
+  }
+  #transaction-list li button {
+    margin-left: 13rem;
+    padding: 10px;
+    border-radius: 8px;
   }
 }
