@@ -5,12 +5,12 @@
 }
 
 body {
-  background-color: rgb(211, 212, 212);
+  background-color: #d3d4d4;
 }
 
 @media (min-width: 320px) {
   header {
-    box-shadow: rgba(83, 80, 80, 0.2) 0px 2px 8px 0px;
+    box-shadow: #53505033 0px 2px 8px 0px;
   }
 
   .nav-bar {
@@ -46,7 +46,7 @@ body {
   }
 
   #day {
-    background-color: rgb(4, 21, 175);
+    background-color: #0415af;
     border-radius: 15px;
     width: 30px;
     height: 30px;
@@ -74,7 +74,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 16px;
-    color: rgb(4, 21, 175);
+    color: #0415af;
   }
 
   /* main styles */
@@ -85,7 +85,7 @@ body {
     gap: 20px;
     align-items: center;
     justify-content: center;
-    background-color: #ffff;
+    background-color: #ffffff;
     width: 90%;
     margin-left: 1rem;
     padding: 12px;
@@ -109,7 +109,7 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 8px;
-    background-color: rgb(211, 212, 212);
+    background-color: #d3d4d4;
     padding: 6px;
     color: #1b1b1b;
     font-size: 18px;
@@ -121,7 +121,7 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 8px;
-    background-color: rgb(211, 212, 212);
+    background-color: #d3d4d4;
     padding: 6px;
     color: #1b1b1b;
     font-size: 18px;
@@ -129,7 +129,7 @@ body {
   }
 
   #balance {
-    color: rgb(36 15 100 / 51%);
+    color: #240f6482;
   }
 
   #income {
@@ -154,7 +154,7 @@ body {
     gap: 6px;
     border-radius: 8px;
     padding: 12px;
-    border: 1px solid rgb(129, 127, 127);
+    border: 1px solid #817f7f;
     width: 250px;
   }
 
@@ -162,9 +162,9 @@ body {
     gap: 6px;
     border-radius: 8px;
     padding: 12px;
-    border: 1px solid rgb(129, 127, 127);
+    border: 1px solid #817f7f;
     width: 250px;
-    background-color: rgb(4, 21, 175);
+    background-color: #0415af;
   }
 
   /* ul stylings  */
@@ -183,7 +183,7 @@ body {
     border-radius: 5px;
   }
 
-  #transaction-list li.income{
+  #transaction-list li.income {
     border-color: #2ecc71;
     color: #2ecc71;
   }
@@ -250,6 +250,7 @@ body {
   #transaction-list {
     width: 90%;
   }
+  
   #transaction-list li button {
     margin-left: 13rem;
     padding: 10px;
