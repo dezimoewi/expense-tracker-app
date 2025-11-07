@@ -10,9 +10,9 @@ body {
 
 @media (min-width: 320px) {
   header {
-    box-shadow: #53505033 0px 2px 8px 0px;
+    box-shadow: #53505033 0 2px 8px 0;
   }
-
+  
   .nav-bar {
     display: flex;
     justify-content: space-between;
@@ -59,7 +59,6 @@ body {
   .person {
     display: flex;
     flex-direction: column;
-    /* width: 60px; */
   }
 
   .person img {
@@ -85,7 +84,7 @@ body {
     gap: 20px;
     align-items: center;
     justify-content: center;
-    background-color: #ffffff;
+    background-color: #fff;
     width: 90%;
     margin-left: 1rem;
     padding: 12px;
@@ -250,7 +249,7 @@ body {
   #transaction-list {
     width: 90%;
   }
-  
+
   #transaction-list li button {
     margin-left: 13rem;
     padding: 10px;
