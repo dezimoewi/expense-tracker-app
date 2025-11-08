@@ -1,11 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
     <title>Personal Expense Tracker</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <header>
+      <div class="nav-bar">
+        <div class="logo-search">
+          <div class="logo">
+            <img src="./images/logo.png" alt="" />
+          </div>
+          <div class="input-bar">
+            <input
+              type="text"
+              id="search"
+              placeholder="Search something here..."
+            />
+            <img
+              src="./images/search_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+            />
+          </div>
+
+          <div class="day-night">
+            <button id="day">
+              <img
+                src="./images/flash_on_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+                alt=""
+              />
+            </button>
+          </div>
+        </div>
+        <div class="person">
+          <img src="./images/assets/kisito.jpeg" alt="" />
+          <div class="per-name">
+            <h4>Delzy</h4>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <h1>Expense Tracker</h1>
+
+    <main>
+      <div id="balance-container">
+        <h2>Your Balance: $ <span id="balance">0.00</span></h2>
+        <div class="totals">
+          <div class="income">Income: $<span id="income">0.00</span></div>
+          <div class="expense">Expenses: $<span id="expense"> 0.00</span></div>
+        </div>
+      </div>
+
+      <form id="transaction-form">
+        <input type="text" id="description" placeholder="Enter description" required>
+        <input type="number" id="amount" placeholder="Enter amount" required />
+        <input type="date" id="date" />
+        <button type="submit">Add Transaction</button>
+      </form>
+
+      <ul id="transaction-list"></ul>
+    </main>
+
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/form.js"></script>
+  </body>
 </html>

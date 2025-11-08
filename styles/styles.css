@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #d3d4d4;
+}
+
+@media (min-width: 320px) {
+  header {
+    box-shadow: #53505033 0 2px 8px 0;
+  }
+
+  .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+  }
+
+  .logo-search {
+    display: flex;
+    flex-direction: row;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .logo img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .input-bar input {
+    padding: 8px;
+    position: absolute;
+    width: 90%;
+    padding-left: 12px;
+    border-radius: 30px;
+    border: 1px solid #a8a8a5;
+  }
+
+  .input-bar img {
+    position: relative;
+    left: 15rem;
+    top: 6px;
+  }
+
+  #day {
+    background-color: #0415af;
+    border-radius: 15px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .person {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .person img {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    object-fit: cover;
+  }
+
+  h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    color: #0415af;
+  }
+
+  /* main styles */
+
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    width: 90%;
+    margin-left: 1rem;
+    padding: 12px;
+    border-radius: 8px;
+  }
+
+  #balance-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .totals {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .income {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: #d3d4d4;
+    padding: 6px;
+    color: #1b1b1b;
+    font-size: 18px;
+    width: 250px;
+  }
+
+  .expense {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: #d3d4d4;
+    padding: 6px;
+    color: #1b1b1b;
+    font-size: 18px;
+    width: 250px;
+  }
+
+  #balance {
+    color: #240f6482;
+  }
+
+  #income {
+    color: #029640;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  #expense {
+    color: #e74c3c;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  #transaction-form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  #transaction-form input {
+    gap: 6px;
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid #817f7f;
+    width: 250px;
+  }
+
+  #transaction-form button {
+    gap: 6px;
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid #817f7f;
+    width: 250px;
+    background-color: #0415af;
+  }
+
+  /* ul stylings  */
+  #transaction-list {
+    list-style: none;
+  }
+
+  #transaction-list li {
+    background: #f9f9f9;
+    padding: 10px;
+    border-left: 5px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+
+  #transaction-list li.income {
+    border-color: #2ecc71;
+    color: #2ecc71;
+  }
+
+  #transaction-list li.expense {
+    border-color: #e74c3c;
+    color: #e74c3c;
+  }
+
+  #transaction-list li button {
+    background: #e74c3c;
+    padding: 4px;
+    margin-left: 8px;
+    border-radius: 4px;
+    border: none;
+    color: #7a0e02;
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header {
+    display: none;
+  }
+
+  main {
+    width: 35%;
+  }
+
+  #balance-container {
+    gap: 32px;
+  }
+
+  .totals {
+    flex-direction: row;
+  }
+
+  .income,
+  .expense {
+    padding: 10px;
+    width: 150px;
+  }
+
+  #transaction-form {
+    gap: 12px;
+  }
+
+  #transaction-form input {
+    width: 420px;
+  }
+
+  #transaction-form button {
+    width: 420px;
+  }
+
+  #transaction-list {
+    width: 90%;
+  }
+
+  #transaction-list li button {
+    margin-left: 13rem;
+    padding: 10px;
+    border-radius: 8px;
+  }
+}
