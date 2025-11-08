@@ -7,36 +7,37 @@ const expense = document.getElementById('expense')
 
 let transactions = JSON.parse(localStorage.getItem('transactions')) || []
 
-function addTransaction(e) {
+function addTransaction (e) {
   e.preventDefault()
   const desc = document.getElementById('description').value
   const amt = +document.getElementById('amount').value
   const date = document.getElementById('date').value || new Date().toISOString().slice(0, 10)
 
   const transaction = {
-    id: Date.now(),
-    description: desc,
-    amount: amt,
-    date: date
-  }
+  id: Date.now(),
+  description: desc,
+  amount: amt,
+  date
+}
+
 
   transactions.push(transaction)
   saveAndRender()
   form.reset()
 }
 
-function deleteTransaction(id) {
+function deleteTransaction (id) {
   transactions = transactions.filter(t => t.id !== id)
   saveAndRender()
 }
 
-function saveAndRender() {
+function saveAndRender () {
   localStorage.setItem('transactions', JSON.stringify(transactions))
   renderTransactions()
   updateTotals()
 }
 
-function renderTransactions() {
+function renderTransactions () {
   list.innerHTML = ''
   transactions.forEach(fo => {
     const sign = fo.amount < 0 ? '-' : '+'
@@ -59,7 +60,7 @@ function renderTransactions() {
   })
 }
 
-function updateTotals() {
+function updateTotals () {
   const amounts = transactions.map(t => t.amount)
   const total = amounts.reduce((acc, val) => acc + val, 0).toFixed(2)
   const incomeTotal = amounts.filter(a => a > 0).reduce((acc, val) => acc + val, 0).toFixed(2)
