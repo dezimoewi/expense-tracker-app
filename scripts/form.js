@@ -8,18 +8,17 @@ const expense = document.getElementById('expense')
 let transactions = JSON.parse(localStorage.getItem('transactions')) || []
 
 function addTransaction (e) {
-  e.preventDefault()
-  const desc = document.getElementById('description').value
-  const amt = +document.getElementById('amount').value
-  const date = document.getElementById('date').value || new Date().toISOString().slice(0, 10)
+    e.preventDefault()
+    const desc = document.getElementById('description').value
+    const amt = +document.getElementById('amount').value
+    const date = document.getElementById('date').value || new Date().toISOString().slice(0, 10)
 
   const transaction = {
-  id: Date.now(),
-  description: desc,
-  amount: amt,
-  date
-}
-
+    id: Date.now(),
+    description: desc,
+    amount: amt,
+    date
+  }
 
   transactions.push(transaction)
   saveAndRender()
