@@ -1,9 +1,9 @@
-let button = document.getElementById("day");
-let body = document.body;
+const button = document.getElementById('day')
+const body = document.body
 
-let colors = ["black", "lightgray"];
+const colors = ['black', 'lightgray']
 
-button.addEventListener("click", () => {
-  const chooseColor = Math.floor(Math.random() * colors.length);
-  body.style.backgroundColor = colors[chooseColor];
-});
+button.addEventListener('click.', () => {
+  const chooseColor = Math.floor(Math.random() * colors.length)
+  body.style.backgroundColor = colors[chooseColor]
+})
