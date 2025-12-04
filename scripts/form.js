@@ -1,4 +1,3 @@
-// Retrieve elements
 const form = document.getElementById('transaction-form');
 const list = document.getElementById('transaction-list');
 const balance = document.getElementById('balance');
@@ -10,7 +9,7 @@ const confirmYes = document.getElementById('confirm-yes');
 const confirmNo = document.getElementById('confirm-no');
 
 let transactions = JSON.parse(localStorage.getItem('transactions')) || [];
-let transactionToDelete = null; // store transaction id to delete
+let transactionToDelete = null;
 
 function addTransaction(e) {
   e.preventDefault();
@@ -90,7 +89,6 @@ function updateTotals() {
   expense.innerText = expenseTotal;
 }
 
-// Modal button events
 confirmYes.addEventListener('click', () => {
   if (transactionToDelete !== null) {
     deleteTransaction(transactionToDelete);
