@@ -116,6 +116,11 @@ body {
     width: 250px;
   }
 
+  .right {
+    display: flex;
+    flex-direction: column;
+  }
+
   .expense {
     display: flex;
     align-items: center;

@@ -50,10 +50,15 @@ function renderTransactions() {
     const item = document.createElement('li');
     item.classList.add(fo.amount < 0 ? 'expense' : 'income');
 
+    const right = document.createElement('div');
+    right.className = "right";
     const textSpan = document.createElement('span');
-    textSpan.textContent = `${fo.description} (${fo.date}) ${sign}$${Math.abs(
+    textSpan.textContent = `${fo.description} (${fo.date})`;
+
+    const text = document.createElement('span');
+    text.textContent = `${sign}$${Math.abs(
       fo.amount
-    ).toFixed(2)}`;
+    ).toFixed(2)}`
 
     const delBtn = document.createElement('button');
     delBtn.textContent = 'Delete';
@@ -61,8 +66,9 @@ function renderTransactions() {
       transactionToDelete = fo.id;
       modal.style.display = 'flex';
     });
-
-    item.appendChild(textSpan);
+    right.appendChild(textSpan)
+    right.appendChild(text)
+    item.appendChild(right);
     item.appendChild(delBtn);
     list.appendChild(item);
   });
