@@ -1,31 +1,28 @@
-The Personal Expense Tracker is a web-based application that helps users manage their finances by tracking income and expenses. Users can add transactions with a description, amount, and date. The app calculates the current balance, total income, and total expenses. Transactions are stored in the browser's localStorage for persistence. A custom modal confirms deletion of transactions to prevent accidental removals.
+# Personal Expense Tracker
 
-<!-- Features -->
+The Personal Expense Tracker is a web-based application that helps users manage their finances by tracking income and expenses. Users can add transactions with a description, amount, and date. The app automatically calculates the current balance, total income, and total expenses. All transactions are stored in the browser's localStorage to ensure data persistence. A custom modal is included to confirm deletion of transactions, preventing accidental removals.
 
-Add income or expense transactions with description, amount, and date.
+## Features
 
-Display list of all transactions.
+- Add income or expense transactions with description, amount, and date.
+- Display a list of all transactions.
+- Automatically calculate and display the following:
+  - Current balance
+  - Total income
+  - Total expenses
+- Delete transactions with a custom confirmation modal.
+- Persistent storage using localStorage.
+- Fully responsive layout for both mobile and desktop screens.
 
-Calculate and display:
+## Technologies Used
 
-Current balance
+- **HTML5** – Provides the structure of the application.
+- **CSS3** – Handles styling and responsive design.
+- **JavaScript (ES6)** – Manages application logic, transaction handling, and DOM manipulation.
+- **LocalStorage** – Stores transactions persistently in the browser.
 
-Total income
+## GitHub Repository
 
-Total expenses
+You can view the full project here:
 
-Delete transactions with a custom confirmation modal.
-
-Data persistence using localStorage.
-
-Responsive layout for mobile and desktop screens.
-
-<!-- Technologies Used -->
-
-HTML5 – For structure of the application.
-
-CSS3 – For styling and responsive design.
-
-JavaScript (ES6) – For application logic, transaction handling, and DOM manipulation.
-
-LocalStorage – For storing transactions persistently in the browser.
+[Personal Expense Tracker on GitHub](https://github.com/dezimoewi/expense-tracker-app/pull/2)
