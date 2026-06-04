@@ -4,6 +4,8 @@ const balance = document.getElementById('balance')
 const income = document.getElementById('income')
 const expense = document.getElementById('expense')
 
+const searchInput = document.getElementById('search')
+
 const modal = document.getElementById('delete-modal')
 const confirmYes = document.getElementById('confirm-yes')
 const confirmNo = document.getElementById('confirm-no')
@@ -46,7 +48,18 @@ function saveAndRender () {
 function renderTransactions () {
   list.innerHTML = ''
 
-  transactions.forEach(fo => {
+  const query = searchInput ? searchInput.value.toLowerCase().trim() : ''
+
+  const filtered = transactions.filter(fo => {
+    if (!query) return true
+    return (
+      fo.description.toLowerCase().includes(query) ||
+      fo.date.includes(query) ||
+      String(fo.amount).includes(query)
+    )
+  })
+
+  filtered.forEach(fo => {
     const sign = fo.amount < 0 ? '-' : '+'
 
     const item = document.createElement('li')
@@ -111,4 +124,9 @@ confirmNo.addEventListener('click', () => {
 })
 
 form.addEventListener('submit', addTransaction)
+
+if (searchInput) {
+  searchInput.addEventListener('input', renderTransactions)
+}
+
 saveAndRender()
