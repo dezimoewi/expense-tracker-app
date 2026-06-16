@@ -17,8 +17,8 @@ html {
 
 body {
   font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
-  background-color: #f4f6f8;
-  color: #1c1e26;
+  background-color: #bcbebe;
+  color: hsla(228, 84%, 52%, 0.973);
   min-height: 100vh;
   line-height: 1.5;
   transition: background-color 0.3s ease, color 0.3s ease;
