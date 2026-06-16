@@ -266,9 +266,8 @@ main {
   box-shadow: 0 0 0 3px rgb(13 148 136 / 12%);
 }
 
-.modal-buttons button,
-#transaction-list li button,
 #transaction-form button {
+  width: 100%;
   padding: 14px;
   border-radius: 10px;
   border: none;
@@ -363,8 +362,15 @@ main {
   padding: 8px 16px;
   margin-left: 10px;
   border-radius: 8px;
+  border: none;
   background: #f43f5e;
+  color: #fff;
+  font-family: inherit;
   font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s, box-shadow 0.2s;
+  white-space: nowrap;
   box-shadow: 0 2px 6px rgb(244 63 94 / 25%);
 }
 
@@ -423,7 +429,13 @@ main {
 .modal-buttons button {
   flex: 1;
   padding: 12px 0;
+  border: none;
+  border-radius: 10px;
+  font-family: inherit;
   font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.1s, box-shadow 0.2s;
 }
 
 .modal-buttons button:active {
@@ -540,38 +552,6 @@ body.dark header {
   border-bottom-color: #252830;
 }
 
-body.dark .input-bar input {
-  background: #1e2028;
-  border-color: #2d303a;
-  color: #e2e4e9;
-}
-
-body.dark .input-bar input::placeholder {
-  color: #6b7280;
-}
-
-body.dark .input-bar input:focus {
-  background: #1e2028;
-  border-color: #2dd4bf;
-  box-shadow: 0 0 0 3px rgb(45 212 191 / 12%);
-}
-
-body.dark #day {
-  background: #14b8a6;
-  border-color: transparent;
-  color: #fff;
-  box-shadow: 0 2px 8px rgb(20 184 166 / 30%);
-}
-
-body.dark #day:hover {
-  background: #0d9488;
-  box-shadow: 0 4px 14px rgb(20 184 166 / 40%);
-}
-
-body.dark .person img {
-  border-color: #2d303a;
-}
-
 body.dark .per-name h4 {
   color: #d1d5db;
 }
@@ -592,6 +572,22 @@ body.dark #balance-container {
   background: linear-gradient(135deg, #0f766e 0%, #0e7490 100%);
 }
 
+body.dark .input-bar input {
+  background: #1e2028;
+  border-color: #2d303a;
+  color: #e2e4e9;
+}
+
+body.dark .input-bar input::placeholder {
+  color: #6b7280;
+}
+
+body.dark .input-bar input:focus {
+  background: #1e2028;
+  border-color: #2dd4bf;
+  box-shadow: 0 0 0 3px rgb(45 212 191 / 12%);
+}
+
 body.dark #transaction-form {
   border-bottom-color: #252830;
 }
@@ -610,6 +606,22 @@ body.dark #transaction-form input:focus {
   background: #191b24;
   border-color: #2dd4bf;
   box-shadow: 0 0 0 3px rgb(45 212 191 / 12%);
+}
+
+body.dark #day {
+  background: #14b8a6;
+  border-color: transparent;
+  color: #fff;
+  box-shadow: 0 2px 8px rgb(20 184 166 / 30%);
+}
+
+body.dark #day:hover {
+  background: #0d9488;
+  box-shadow: 0 4px 14px rgb(20 184 166 / 40%);
+}
+
+body.dark .person img {
+  border-color: #2d303a;
 }
 
 body.dark #transaction-form button {
@@ -638,8 +650,16 @@ body.dark #transaction-list li.income {
   border-left-color: #10b981;
 }
 
+body.dark #transaction-list li.income .right span:last-child {
+  color: #059669;
+}
+
 body.dark #transaction-list li.expense {
   border-left-color: #f43f5e;
+}
+
+body.dark #transaction-list li.expense .right span:last-child {
+  color: #e11d48;
 }
 
 body.dark #transaction-list li button {
