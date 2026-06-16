@@ -1,6 +1,10 @@
 # Personal Expense Tracker
 
-The Personal Expense Tracker is a web-based application that helps users manage their finances by tracking income and expenses. Users can add transactions with a description, amount, and date. The app automatically calculates the current balance, total income, and total expenses. All transactions are stored in the browser's localStorage to ensure data persistence. A custom modal is included to confirm deletion of transactions, preventing accidental removals.
+The Personal Expense Tracker is a web-based application that helps users manage their finances
+by tracking income and expenses. Users can add transactions with a description, amount, and date.
+The app automatically calculates the current balance, total income, and total expenses.
+All transactions are stored in the browser's localStorage to ensure data persistence.
+A custom modal is included to confirm deletion of transactions, preventing accidental removals.
 
 ## Features
 
